@@ -12,6 +12,9 @@ def process_chat(api, data):
     for command in commands.commands:
         command(api, data)
 
+    if data['body'] == 'test':
+        api.post('test successful')
+
 
 def main():
     parser = argparse.ArgumentParser()
