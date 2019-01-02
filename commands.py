@@ -29,7 +29,7 @@ def command(func):
                 body, file = res
 
             body = u'>>{}\n{}'.format(data['count'], body)
-            api.post(body, config.bot_name, getattr(func, 'to_convo', data['convo']), config.anna_trip, file)
+            api.post(body, config.bot_name, getattr(func, 'to_convo', data['convo']), config.bot_trip, file)
 
     command_names.append(func.__name__)
     commands.append(callback)
